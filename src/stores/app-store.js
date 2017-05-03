@@ -118,7 +118,7 @@ class AppStore {
   @action resetToHome = () => (window.location.href = window.location.origin);
 
   @action loadExampleUrl = () => {
-    const exampleUrl = `${window.location.protocol}//kitze.io`;
+    const exampleUrl = `${window.location.protocol}//pixel2html.com`;
     this.setUrl(exampleUrl);
     this.setUrltoLoad(exampleUrl, false, true);
   };

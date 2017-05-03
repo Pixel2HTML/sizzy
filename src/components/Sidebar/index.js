@@ -155,11 +155,6 @@ class SidebarComponent extends Component {
                   </ButtonText>}
               </ToolbarButton>
 
-              <ToolbarButton title="Switch theme" onClick={app.switchTheme}>
-                <ButtonIcon name="paint-brush" />
-                {sidebarFullSize && <ButtonText> Switch theme </ButtonText>}
-              </ToolbarButton>
-
             </ToolbarButtons>
 
             {!sidebarFullSize && <Label> Zoom </Label>}

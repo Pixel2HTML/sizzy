@@ -6,6 +6,8 @@ import {toolbarHeight} from 'styles/sizes';
 //components
 import $UrlBar from 'components/UrlBar';
 
+import Bg from 'img/bg.png';
+
 const scalePulseAnimation = keyframes`
   from {
     transform: scale(1.1);
@@ -38,6 +40,9 @@ export const WelcomeBox = styled.div`
   opacity: 1;
   z-index: 99;
   background-color: ${p => p.theme.backgroundColor};
+  background-image: url(${p => Bg});
+  background-position: center center;
+  background-size: cover;
 `;
 
 export const IntroText = styled.div`
@@ -52,7 +57,7 @@ export const ExampleLink = styled.div`
   font-size: 15px;
   text-decoration:underline;
   cursor: pointer;
-  
+
   &:hover {
     opacity: 1;
   }
@@ -98,7 +103,7 @@ export const ShapesWrap = styled.div`
   margin: auto;
   opacity: 0.8;
   ${mustSize('100%')}
-  
+
   ${p => cond(!p.loading, `animation: ${scalePulseAnimation} 2000ms infinite alternate-reverse`)};
   ${p => cond(p.loading, `animation: ${shapesScaleAndRoatateAnimation} 1500ms infinite alternate;`)};
 `;
@@ -120,7 +125,7 @@ export const MadeBy = styled.a`
   right: 0;
   margin: auto;
   width: 110px;
-  
+
   &:hover {
     text-decoration: underline;
     color: rgba(255, 255, 255, 1);

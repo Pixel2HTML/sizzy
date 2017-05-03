@@ -23,11 +23,8 @@ import {ThemeProvider} from 'styled-components';
 //styles
 import {UrlInputStyles} from './styles';
 
-//components
-import ChromeExtensionLink from 'components/ChromeExtensionLink';
-
 //img
-import LetterSvg from 'img/S.svg';
+import LetterSvg from 'img/icon.svg';
 import ShapesSvg from 'img/shapes.svg';
 
 type Props = {
@@ -60,7 +57,7 @@ class WelcomeBoxComponent extends Component {
 
         <Content show={showWelcomeContent}>
 
-          <IntroText> Welcome to Sizzy! Enter an url to start: </IntroText>
+          <IntroText> Enter an url to start </IntroText>
 
           <ThemeProvider theme={themes.dark}>
             <UrlBar styles={UrlInputStyles} />
@@ -70,13 +67,8 @@ class WelcomeBoxComponent extends Component {
             Click here to load an example!
           </ExampleLink>
 
-          <ChromeExtensionLink />
         </Content>
 
-        {!loading &&
-          <MadeBy target="_blank" href="https://kitze.io">
-            made by @thekitze
-          </MadeBy>}
       </WelcomeBox>
     );
   }
