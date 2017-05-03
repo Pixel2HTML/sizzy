@@ -11,7 +11,7 @@ A tool for developing responsive websites crazy-fast, made by [@thekitze](http:/
 [![OpenCollective](https://opencollective.com/sizzy/sponsors/badge.svg)](#sponsors)
 
 
-![gif](http://i.imgur.com/BtyqVle.gif)
+![gif](https://cldup.com/7ClJFF3P7R.gif)
 
 ## Sharing with an url
 Add ```?url=http://your-url.com``` at the end of the url to share it with a preloaded url.

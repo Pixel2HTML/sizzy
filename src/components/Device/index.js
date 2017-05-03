@@ -9,6 +9,8 @@ import ORIENTATIONS from 'config/orientations';
 
 //external
 import Framed from 'react-frame-component';
+import Urlbox from 'urlbox';
+import CopyToClipboard from 'react-copy-to-clipboard';
 
 //styled-components
 import {
@@ -84,14 +86,33 @@ type Props = {
     const smallZoom = zoom < 50;
     const showSize = showSizes === true && smallZoom === false;
 
+    // Plugin your API key and secret
+    const urlbox = Urlbox('', '');
+
+    // Set your options
+    const options = {
+      url: urlToLoad,
+      width: width,
+      height: height,
+      full_page: true
+    };
+
+    const imgUrl = urlbox.buildUrl(options);
+
     return (
       <Device style={deviceStyle}>
         <Header>
           <Buttons>
             {!smallZoom &&
-              <Button onClick={() => alert('Soon! 🙈')} title="Settings">
-                <ButtonIcon className={buttonIconClassname} name="cog" />
-              </Button>}
+              <CopyToClipboard text={imgUrl}>
+                <Button
+                  onClick={() =>
+                    alert('Screenshot URL copied to clipboard! 📸')}
+                  title="Settings"
+                >
+                  <ButtonIcon className={buttonIconClassname} name="camera" />
+                </Button>
+              </CopyToClipboard>}
             <Button
               onClick={settings.toggleOrientation}
               title="Toggle orientation"

@@ -26,10 +26,12 @@
     "react": "^15.4.2",
     "react-addons-css-transition-group": "^15.5.2",
     "react-body-classname": "^1.1.1",
+    "react-copy-to-clipboard": "^5.0.0",
     "react-dom": "^15.4.2",
     "react-fontawesome": "^1.6.1",
     "react-frame-component": "^1.0.3",
     "styled-components": "1.4.5",
+    "urlbox": "^1.2.3",
     "valid-url": "^1.0.9"
   },
   "jest": {
